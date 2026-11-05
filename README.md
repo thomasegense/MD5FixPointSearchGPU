@@ -14,11 +14,30 @@ md5    54db1011d76d137956603122ad86d762
        ^^^^^^^^^^^^
 ```
 
+It was written for the MD5 challenge at
+[solveathome.org/projects/md5](https://solveathome.org/projects/md5),
+which keeps records for MD5 self-matches and for the most leading zeros.
+
 The search runs on an NVIDIA GPU using CUDA. A Java program controls it,
 checks every hit again with Java's own MD5 and logs new best results.
 It runs on Windows and Linux. Several machines can search at the same time:
 each one picks random starting points from 2^96 possibilities, so they never
 repeat each other's work.
+
+## Get the code
+
+```
+git clone https://github.com/thomasegense/MD5FixPointSearchGPU.git
+cd MD5FixPointSearchGPU
+```
+
+Or download it as a zip: **Code → Download ZIP** on the GitHub page.
+
+## Best results found with this program
+
+| Category | Characters | Input | MD5 |
+|---|---|---|---|
+| Suffix match | 13 | `2c1952edef05b82a94a77102ca4e0c57` | `ffc06efdc60838c438f77102ca4e0c57` |
 
 ## Files
 
@@ -91,7 +110,7 @@ Within the same major version (e.g. 13.x) this works. If the program reports
 1. Open **x64 Native Tools Command Prompt for VS 2022**.
 2. Go to the folder with the files, tell the script which Java to use, and build:
    ```
-   cd /d C:\path\to\md5search
+   cd /d C:\path\to\MD5FixPointSearchGPU
    set JAVA=C:\java\jdk-26\bin\java.exe
    set LOAD=100
    build.bat
@@ -111,7 +130,7 @@ the Java version is older than 22.
 
 Any command prompt works:
 ```
-cd /d C:\path\to\md5search
+cd /d C:\path\to\MD5FixPointSearchGPU
 C:\java\jdk-26\bin\java -Dmd5.load=100 --enable-native-access=ALL-UNNAMED Md5Search.java
 ```
 
@@ -192,7 +211,7 @@ sudo apt install -y g++-12
 ## L2. Build and start (first time, and after changing md5search.cu)
 
 ```
-cd /path/to/md5search
+cd /path/to/MD5FixPointSearchGPU
 chmod +x build.sh
 LOAD=100 JAVA=/usr/lib/jvm/java-25-openjdk-amd64/bin/java ./build.sh
 ```
@@ -217,7 +236,7 @@ Settings for `build.sh`:
 ## L3. Start the search (when the library is already built)
 
 ```
-cd /path/to/md5search
+cd /path/to/MD5FixPointSearchGPU
 /usr/lib/jvm/java-25-openjdk-amd64/bin/java -Dmd5.load=100 --enable-native-access=ALL-UNNAMED Md5Search.java
 ```
 
