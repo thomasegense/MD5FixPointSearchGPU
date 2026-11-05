@@ -1,0 +1,6 @@
+# Keep line endings correct on every platform
+*.sh   text eol=lf
+*.bat  text eol=crlf
+*.cu   text eol=lf
+*.java text eol=lf
+*.md   text eol=lf

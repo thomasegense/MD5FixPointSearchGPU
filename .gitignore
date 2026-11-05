@@ -1,0 +1,14 @@
+# Build output
+*.dll
+*.so
+*.lib
+*.exp
+*.obj
+md5test
+md5test.exe
+
+# Runtime files (each machine keeps its own)
+md5search.log
+md5search-best.properties
+md5search-best.properties.tmp
+console.out
