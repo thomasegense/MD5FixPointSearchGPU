@@ -6,11 +6,11 @@ Md5Search searches 32-character lowercase hex strings for three kinds of records
 - **Suffix match** – the MD5 ends with the same characters as the input
 - **Leading zeros** – the MD5 starts with as many `0` characters as possible
 
-Example of a 12-character prefix match:
+Example of a 14-character prefix match:
 
 ```
-input  54db1011d76dc70a0a9df3ff3e0b390f
-md5    54db1011d76d137956603122ad86d762
+input  aa265d3803aaea5a6ac6044540ca8b59
+md5    aa265d3803aaea02261baeca7cb8068c 
        ^^^^^^^^^^^^
 ```
 
