@@ -37,7 +37,12 @@ Or download it as a zip: **Code → Download ZIP** on the GitHub page.
 
 | Category | Characters | Input | MD5 |
 |---|---|---|---|
+| Prefix match | 14 | `aa265d3803aaea5a6ac6044540ca8b59` | `aa265d3803aaea02261baeca7cb8068c` |
+| Prefix zeros | 14 | `41e514392bca4740779992484850a846` | `000000000000007378930e8f847e9946` |
 | Suffix match | 13 | `2c1952edef05b82a94a77102ca4e0c57` | `ffc06efdc60838c438f77102ca4e0c57` |
+
+
+
 
 ## Files
 
